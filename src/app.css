@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "PT Sans", sans-serif;
+  color: #808080;
+  background-color: #343434;
+}
+
+a {
+  color: orange;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a[disabled] {
+  opacity: 0.5;
+}
+
+input,
+button {
+  border: none;
+
+  border-radius: 6px;
+}
+
+.btn {
+  border: 1px solid transparent;
+  padding: 4px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+.btn-link {
+  color: orange;
+  border-radius: 0;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-link:hover {
+  color: rgb(255 165 0 / 80%);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+input {
+  padding: 4px;
+}
+
+.lang-en {
+  display: none;
+}
+
+img {
+  display: block;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.content-container {
+  margin: 50px auto;
+  max-width: 700px;
+}
+
+.content-container__footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.controls__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.controls__item input {
+  width: 45px;
+}
+
+.controls__item .btn {
+  width: 100%;
+}
+
+.question {
+  margin-bottom: 40px;
+}
+
+.question img {
+  display: block;
+}
+
+.options__item {
+  border-radius: 8px;
+  border: 1px solid #555252;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.options__item + .options__item {
+  margin-top: 7px;
+}
+
+.options__item--selected {
+  border-color: #e7e99f;
+  background-color: #f8f9d7;
+}
+
+.options__item--correct {
+  border-color: rgb(167 203 174 / 50%);
+  background-color: rgb(167 203 174 / 10%);
+}
+
+.options__item--incorrect {
+  border-color: rgb(242 154 154 / 50%);
+  background-color: rgb(242 154 154 / 10%);
+}
