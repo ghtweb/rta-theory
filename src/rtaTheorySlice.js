@@ -19,6 +19,9 @@ const rtaTheorySlice = createSlice({
         setAnswered: (state, {payload}) => {
             state.questions[state.currentQuestion].answerId = payload;
         },
+        resetAllAnswered: state => {
+            state.questions.map(question => question.answerId = null);
+        },
         incrementAnswerError: state => {
             state.counters.errors += 1;
         },
@@ -42,6 +45,6 @@ const rtaTheorySlice = createSlice({
 });
 
 export const { nextQuestion, incrementAnswerError, incrementAnswerCorrect, setAnswered, shuffleQuestions,
-    toQuestionNumberChange, toQuestion } = rtaTheorySlice.actions;
+    toQuestionNumberChange, toQuestion, resetAllAnswered } = rtaTheorySlice.actions;
 
 export default rtaTheorySlice.reducer;

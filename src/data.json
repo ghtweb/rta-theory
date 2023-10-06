@@ -3828,19 +3828,19 @@
         "options": [
             {
                 "text_en": "They are not able to see the hazard",
-                "text_ru": "Они не видят опасности"
+                "text_ru": "это мешает им заметить угрозу"
             },
             {
                 "text_en": "Their reactions maybe either too slow or exaggerated",
-                "text_ru": "Их реакция может быть либо слишком медленной, либо преувеличенной."
+                "text_ru": "Их реакция оказывается или замедленной, или чрезмерной"
             },
             {
                 "text_en": "Their reactions are always late",
-                "text_ru": "Их реакция всегда запаздывает"
+                "text_ru": "их реакция постоянно запаздывает"
             }
         ],
         "text_en": "New drivers tend to focus more on mechanical side of operations, this is risky period because,",
-        "text_ru": "Новые водители, как правило, больше сосредотачиваются на механической стороне работы, это рискованный период, потому что"
+        "text_ru": "Водители-новички склонны уделять больше внимания технической стороне управления, и такой период опасен, так как"
     },
     {
         "numb": 184,

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {
     incrementAnswerCorrect,
     incrementAnswerError,
-    nextQuestion,
+    nextQuestion, resetAllAnswered,
     setAnswered, shuffleQuestions, toQuestion, toQuestionNumberChange
 } from "./rtaTheorySlice";
 import clsx from "clsx";
@@ -31,7 +31,10 @@ function App() {
         }
     };
 
-    const nextBtnClickHandler = () => dispatcher(nextQuestion());
+    const nextBtnClickHandler = () => {
+        dispatcher(nextQuestion());
+        dispatcher(resetAllAnswered());
+    };
 
     const selectedClassName = index => {
         if (!Number.isInteger(question.answerId)) {
