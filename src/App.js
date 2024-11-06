@@ -7,9 +7,17 @@ import {
     setAnswered, shuffleQuestions, toQuestion, toQuestionNumberChange
 } from "./rtaTheorySlice";
 import clsx from "clsx";
+import {useState} from "react";
+
+const LANG = {
+    ru: 'ru',
+    en: 'en'
+}
 
 function App() {
     const dispatcher = useDispatch()
+
+    const [lang, setLang] = useState(LANG.ru);
 
     const questions = useSelector(state => state.rtaTheory.questions);
     const currentQuestion = useSelector(state => state.rtaTheory.currentQuestion);
@@ -79,15 +87,20 @@ function App() {
                         перейти к вопросу
                     </button>
                 </div>
+                <div className="controls__item">
+                    <button className="btn btn-primary" onClick={() => setLang(lang === LANG.ru ? LANG.en : LANG.ru)}>
+                        {lang}
+                    </button>
+                </div>
             </div>
             <div className="item">
-                <div className="question" dangerouslySetInnerHTML={{__html: `${question.numb}. ${question.text_ru}`}}></div>
+                <div className="question" dangerouslySetInnerHTML={{__html: `${question.numb}. ${question[`text_${lang}`]}`}}></div>
                 <div className="options">
                     {question.options.map((option, index) => <div
                         key={index}
                         className={clsx('options__item', selectedClassName(index))}
                         onClick={() => answerClickHandler(index)}
-                        dangerouslySetInnerHTML={{__html: option.text_ru}}
+                        dangerouslySetInnerHTML={{__html: option[`text_${lang}`]}}
                     ></div>)}
                 </div>
             </div>
